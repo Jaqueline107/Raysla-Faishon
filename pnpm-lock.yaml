@@ -61,13 +61,13 @@ importers:
         version: 1.0.7(tailwindcss@3.4.14)
     devDependencies:
       '@types/node':
-        specifier: ^20
+        specifier: ^20.17.6
         version: 20.17.6
       '@types/react':
-        specifier: ^18
+        specifier: ^18.3.12
         version: 18.3.12
       '@types/react-dom':
-        specifier: ^18
+        specifier: ^18.3.1
         version: 18.3.1
       drizzle-kit:
         specifier: ^0.28.0
