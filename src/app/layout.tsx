@@ -3,13 +3,13 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ClerkProvider,
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton,
-} from "@clerk/nextjs";
+// import {
+//   ClerkProvider,
+//   SignedIn,
+//   SignedOut,
+//   SignInButton,
+//   UserButton,
+// } from "@clerk/nextjs";
 
 <header className="w-full bg-orange-800 opacity-95 shadow-md fixed top-0 z-50">
   <nav className="w-full flex justify-center py-4">
@@ -62,64 +62,65 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          <header className="w-full bg-orange-800 opacity-90 shadow-md fixed top-0 z-50">
-            <nav className="w-full flex justify-center py-4">
-              <ul className="flex flex-row gap-24 items-center">
-                <Link
-                  href={"/"}
-                  className="flex items-center gap-2 text-white text-lg font-semibold hover:text-orange-700"
-                >
-                  HOME
-                </Link>
-                <Link
-                  href={"./Loja"}
-                  className="flex items-center gap-2 text-white text-lg font-semibold hover:text-orange-700"
-                >
-                  LOJA
-                </Link>
-                <Link href={"/"}>
-                  {" "}
-                  <Image
-                    src="/logo.png"
-                    alt="Next.js logo"
-                    width={75}
-                    height={38}
-                    priority
-                    className="rounded-2xl"
-                  />
-                </Link>
-                <Link
-                  href={""}
-                  className="flex items-center gap-2 text-white text-lg font-semibold hover:text-orange-700"
-                >
-                  SOBRE
-                </Link>
-                <Link
-                  href={""}
-                  className="flex items-center gap-2 text-white text-lg font-semibold hover:text-orange-700 opacity-95"
-                >
-                  CONTATO
-                </Link>
-              </ul>
-            </nav>
-          </header>
-          {children}
-          <footer className="row-start-3 font-semibold mt-8 flex gap-6 flex-wrap items-center justify-center py-5 text-white bg-orange-800 shadow-md">
-            © 2024 Raysla Fashion
-            <SignedOut>
-              <SignInButton />
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-          </footer>
-        </body>
-      </html>
-    </ClerkProvider>
+    // <ClerkProvider>
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <header className="w-full bg-orange-800 opacity-90 shadow-md fixed top-0 z-50">
+          <nav className="w-full flex justify-center py-4">
+            <ul className="flex flex-row gap-24 items-center">
+              <Link
+                href={"/"}
+                className="flex items-center gap-2 text-white text-lg font-semibold hover:text-orange-700"
+              >
+                HOME
+              </Link>
+              <Link
+                href={"./Loja"}
+                className="flex items-center gap-2 text-white text-lg font-semibold hover:text-orange-700"
+              >
+                LOJA
+              </Link>
+              <Link href={"/"}>
+                {" "}
+                <Image
+                  src="/logo.png"
+                  alt="Next.js logo"
+                  width={75}
+                  height={38}
+                  priority
+                  className="rounded-2xl"
+                />
+              </Link>
+              <Link
+                href={""}
+                className="flex items-center gap-2 text-white text-lg font-semibold hover:text-orange-700"
+              >
+                SOBRE
+              </Link>
+              <Link
+                href={""}
+                className="flex items-center gap-2 text-white text-lg font-semibold hover:text-orange-700 opacity-95"
+              >
+                CONTATO
+              </Link>
+            </ul>
+          </nav>
+        </header>
+        {children}
+        <footer className="row-start-3 font-semibold mt-8 flex gap-6 flex-wrap items-center justify-center py-5 text-white bg-orange-800 shadow-md">
+          © 2024 Raysla Fashion
+        </footer>
+      </body>
+    </html>
+    // </ClerkProvider>
   );
 }
+
+// <SignedOut>
+// <SignInButton />
+// </SignedOut>
+// <SignedIn>
+// <UserButton />
+// </SignedIn>
