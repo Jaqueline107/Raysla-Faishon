@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { useUser } from "@clerk/nextjs";
+// import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 
 const AddProduto = () => {
-  const { user, isLoaded } = useUser();
+  // const { user, isLoaded } = useUser();
   const router = useRouter();
 
   const [form, setForm] = useState({
@@ -15,13 +15,13 @@ const AddProduto = () => {
     available: false,
   });
 
-  if (!isLoaded) {
-    return <p>Carregando...</p>;
-  }
+  // if (!isLoaded) {
+  //   return <p>Carregando...</p>;
+  // }
 
-  if (!user) {
-    return <p>Você não tem permissão para acessar esta página.</p>;
-  }
+  // if (!user) {
+  //   return <p>Você não tem permissão para acessar esta página.</p>;
+  // }
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
